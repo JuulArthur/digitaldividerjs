@@ -1,0 +1,233 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:50%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/BG.jpg) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:480px;                   /* text area height */
+    width:800px;                   /* text area width */
+    text-align:center;
+}
+
+#c {
+    position: absolute;
+    left: 0%;
+    top: 12%;
+    height:480px;                   /* text area height */
+    width:800px; 
+    z-index: 100;
+}
+
+.fieldOne{
+    background:url(../img/fieldone.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    height:150px;                   /* text area height */
+    width:150px;                   /* text area width */
+    left: 50px;
+    top: 75px;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+
+.fieldTwo{
+    background:url(../img/fieldtwo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    height:150px;                   /* text area height */
+    width:150px;                   /* text area width */
+    left: 350px;
+    top: 75px;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+
+.fieldThree{
+    background:url(../img/fieldthree.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    height:150px;                   /* text area height */
+    width:150px;                   /* text area width */
+    left: 50px;
+    top: 405px;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+
+.fieldFour{
+    background:url(../img/fieldfour.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    height:150px;                   /* text area height */
+    width:150px;                   /* text area width */
+    left: 350px;
+    top: 405px;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+
+.fieldFive{
+    background:url(../img/fieldfive.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    height:150px;                   /* text area height */
+    width:150px;                   /* text area width */
+    left: 630px;
+    top: 405px;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+
+.fieldSix{
+    background:url(../img/fieldsix.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    height:150px;                   /* text area height */
+    width:150px;                   /* text area width */
+    left: 630px;
+    top: 235px;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+.bottom-border
+{
+    background: url(../img/miniTrails.png);
+    height: 200px;
+    width: 800px;
+    top: 33%;
+    right: 170px;
+    position: absolute;
+
+    -webkit-animation: slide 5s linear infinite;
+       -moz-animation: slide 10s linear infinite;
+            animation: slide 10s linear infinite;
+}
+
+
+@-webkit-keyframes slide
+{
+   
+    100% {background-position: 1500px 0;}
+}​
+
+@-moz-keyframes slide
+{
+    
+    100% {background-position: 1500px 0;}
+}
+
+@keyframes slide
+{
+    100% {background-position: 1500px 0;}
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+        transform: rotate(90deg);                              /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
